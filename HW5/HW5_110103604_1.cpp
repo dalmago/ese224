@@ -21,20 +21,52 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
+#include <string>
 
-#define FILENAME "NUMBERS.dat"
+#define INPUTFILE "NUMBERS.dat"
+#define OUTPUTFILE "NUMBERS_OUT.dat"
 
 using namespace std;
 
 int main(int argc, char** argv){
+    string s = "";
+    char c;
+    int i;
+    double j;
 
-    ifstream numbers(FILENAME);
-    if (numbers.fail()){
-        cerr << "Fail opening file: " << FILENAME << endl;
+    ifstream input(INPUTFILE);
+    if (input.fail()){
+        cerr << "Fail opening file: " << INPUTFILE << endl;
         exit(1);
     }
 
+    ofstream output(OUTPUTFILE);
+    if (output.fail()){
+        cerr << "Fail opening file: " << OUTPUTFILE << endl;
+        exit(1);
+    }
 
+    while ((c = input.get()) != EOF){
+        if ((c == ',' || c == '\n')){
+            if (s == "") continue;
+
+            if (s.find('.') == -1){
+                i = std::atoi(s.c_str());
+                output << i << " ";
+            } else{
+
+                j = std::atof(s.c_str());
+                output << j << " ";
+            }
+            s = "";
+        }
+        else if (c != ' '){
+            s += c;
+        }
+    }
+
+    input.close();
+    output.close();
 
     return (EXIT_SUCCESS);
 }
