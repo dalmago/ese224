@@ -19,6 +19,7 @@
  * information, reads all the data on it and outputs, in an organized
  * table, the maximum number of days for a task within each event and
  * the total number of days for the project conclusion.
+ *
  */
 
 #include <iostream>
