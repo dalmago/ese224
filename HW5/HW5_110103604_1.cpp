@@ -15,7 +15,12 @@
  * Compiled in: GCC 4.9.1
  * Tested in: Unix and MAC OS X
  *
- * Description:
+ * Description: The program reads a file containing
+ * integer and floating-point values separated by
+ * commas, which may or may not be followed by additional
+ * whitespace, and generates a new file containing
+ * just the values separated by spaces.
+ *
  */
 
 #include <iostream>
@@ -47,7 +52,11 @@ int main(int argc, char** argv){
     }
 
     while ((c = input.get()) != EOF){
+
         if ((c == ',' || c == '\n')){
+            if (c == '\n' && s == ""){
+                output << endl;
+            }
             if (s == "") continue;
 
             if (s.find('.') == -1){
@@ -59,8 +68,9 @@ int main(int argc, char** argv){
                 output << j << " ";
             }
             s = "";
+            if (c == '\n') output << endl;
         }
-        else if (c != ' '){
+        else if (c != ' '){  // Ignores white spaces
             s += c;
         }
     }
