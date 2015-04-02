@@ -62,7 +62,7 @@ int main(int argc, char** argv){
         k = altitude;
 
         if (rocket.eof() || i == lines){
-            cout << "The rocket never falls back" << endl;
+            cout << "The rocket doesn't fall back during the listed time" << endl;
         }
     }
 
