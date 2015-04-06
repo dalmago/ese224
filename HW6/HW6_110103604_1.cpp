@@ -4,25 +4,25 @@
  *
  * Distributed under terms of the MIT license.
  *
+ * ESE 224
+ * Homework 6
+ * Exercise 19
+ *
  * Created: 2015-04-06
  *      by: Matheus Dal Mago
+ *      SBU ID: 110103604
  *
- * Description:
+ * Compiled in: GCC 4.9.1
+ * Tested in: Unix and MAC OS X
+ *
+ * Description: The following function detects and prints to a specified
+ * output file the first n prime numbers. The output file must be valid and
+ * defined.
+ *
+ * Parameters:
+ *      (int) n - number of prime numbers to be calculated
+ *      (ostream &) file - the file where the results will be printed
  */
-
-#include <iostream>
-#include <cstdlib>
-
-using namespace std;
-
-void primeGen(int n, ostream& file);
-
-int main(int argc, char** argv){
-
-    primeGen(25, cout);
-
-    return (EXIT_SUCCESS);
-}
 
 void primeGen(int n, ostream& file){
     int primeCnt = 0;
