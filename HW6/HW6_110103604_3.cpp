@@ -19,7 +19,7 @@
  * textbook. It estimates the real roots of a polynomial function, using
  * the intersection of a straight line through the function values with
  * the x-axis, instead of using the midpoint of the subinterval.
- * Just the lines 88 and 89 of this file were modified from the program
+ * Just the lines 89 and 90 of this file were modified from the program
  * shown in the textbook.
  */
 
