@@ -4,10 +4,23 @@
  *
  * Distributed under terms of the MIT license.
  *
+ * ESE 224
+ * Homework 6
+ * Exercise 41
+ *
  * Created: 2015-04-06
  *      by: Matheus Dal Mago
+ *      SBU ID: 110103604
  *
- * Description:
+ * Compiled in: GCC 4.9.1
+ * Tested in: Unix and MAC OS X
+ *
+ * Description: This program modifies the program chapter6_10 from the
+ * textbook. It estimates the real roots of a polynomial function, using
+ * the intersection of a straight line through the function values with
+ * the x-axis, instead of using the midpoint of the subinterval.
+ * Just the lines 88 and 89 of this file were modified from the program
+ * shown in the textbook.
  */
 
 /*----------------------------------------------------*/
