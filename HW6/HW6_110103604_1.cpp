@@ -23,8 +23,9 @@
  *      (int) n - number of prime numbers to be calculated
  *      (ostream &) file - the file where the results will be printed
  */
+#include <iostream>
 
-void primeGen(int n, ostream& file){
+void primeGen(int n, std::ostream& file){
     int primeCnt = 0;
 
     for (int j=2; primeCnt<n; j++){
@@ -35,7 +36,7 @@ void primeGen(int n, ostream& file){
             if (divisible > 2) break; // already not prime
         }
         if (divisible == 2){
-            file << j << endl;
+            file << j << std::endl;
             primeCnt++;
         }
     }
